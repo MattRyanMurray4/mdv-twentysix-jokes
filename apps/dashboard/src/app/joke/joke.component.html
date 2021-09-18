@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <yo-mom-jokes-list
+      [jokes]="jokes$ | async"
+      (selected)="selectJoke($event)"
+      (deleted)="deleteJoke($event)"
+    ></yo-mom-jokes-list>
+  </div>
+  <div class="col-50" layout="row" layout-align="center center">
+    <yo-mom-jokes-details
+      [form]="form"
+      [joke]="selectedJoke$ | async"
+      (cancelled)="cancel()"
+    ></yo-mom-jokes-details>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> <h1>Select a Joke</h1> </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let joke of jokes"
+        (click)="selected.emit(joke)"
+        class="mat-list-item"
+      >
+        <h1 matLine>{{ joke.joke }}</h1>
+
+        <button
+          mat-icon-button
+          (click)="deleted.emit(joke); $event.stopImmediatePropagation()"
+        >
+          <!-- add subroute -->
+          <mat-icon *ngIf="!readonly">delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

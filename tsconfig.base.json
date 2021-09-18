@@ -14,8 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "paths": {
-      "@yo-mom/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@yo-mom/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@yo-mom/core-data": ["libs/core-data/src/index.ts"],
+      "@yo-mom/core-state": ["libs/core-state/src/index.ts"],
+      "@env/environment": ["libs/environment/src/lib/environments/index.ts"],
+      "@yo-mom/material": ["libs/material/src/index.ts"],
+      "@yo-mom/theme": ["libs/theme/src/index.ts"],
+      "@yo-mom/ui-library": ["libs/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

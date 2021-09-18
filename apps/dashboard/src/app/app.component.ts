@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@yo-mom/api-interfaces';
 
 @Component({
   selector: 'yo-mom-root',
@@ -8,6 +6,6 @@ import { Message } from '@yo-mom/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = 'Yo-MOMMA!';
+  links = [{ path: 'jokes', icon: 'view_list', title: 'Yo-Momma' }];
 }
